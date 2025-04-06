@@ -4,7 +4,7 @@ export class TokenService {
   }
 
   setToken(token) {
-    localStorage.setItem(this.TOKEN_KEY, token);
+    localStorage.setItem(this.TOKEN_KEY,  token);
   }
 
   getToken() {
@@ -17,3 +17,4 @@ export class TokenService {
 }
 
 export const authToken = new TokenService("access_token");
+export const trainData = new TokenService("train_info")

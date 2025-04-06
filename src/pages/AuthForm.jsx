@@ -38,7 +38,7 @@ const AuthForm = () => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-console.log(formData);
+  console.log(formData);
 
   const handlePassword = (e) => {
     try {
@@ -80,23 +80,27 @@ console.log(formData);
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
-      <Card className="w-full max-w-md">
-        <CardHeader className="space-y-1">
-          <CardTitle className="text-2xl font-bold text-center">
-            {activeTab === "login" ? "Welcome Back" : "Get Started"}
+    <div className="relative flex justify-center items-center min-h-screen bg-background p-4">
+      <img
+              src="./logo2.svg"
+              className="absolute hidden md:block max-w-full opacity-25"
+            />
+      <Card className="w-full z-20 max-w-md bg-white/10 backdrop-blur-lg border border-white/30 rounded-xl p-6 shadow-lg ">
+        <CardHeader className="space-y-2">
+          <CardTitle className="text-2xl font-bold text-center flex justify-center items-center">
+            <img
+              src="./logo2.svg"
+              className="max-w-[6em] md:max-w-[8em] lg:max-w-[10em]"
+            />
           </CardTitle>
-          <CardDescription className="text-center">
-            Enter your credentials to access your account
-          </CardDescription>
         </CardHeader>
         <CardContent>
           <Tabs
             defaultValue="login"
             onValueChange={setActiveTab}
-            className="w-full"
+            className="flex justify-center  w-full"
           >
-            <TabsList className="grid grid-cols-2 mb-6">
+            <TabsList className="grid grid-cols-2  mb-6">
               <TabsTrigger value="login">Login</TabsTrigger>
               <TabsTrigger value="register">Register</TabsTrigger>
             </TabsList>

@@ -6,9 +6,9 @@ import { Outlet } from "react-router-dom";
 function RootLayout() {
   return (
     <div className="bg-background">
-      <div className="flex flex-col justify-between h-screen ">
+      <div className="flex flex-col justify-between  ">
         <Navbar  />
-        <main className="grow  pt-20 border-2  min-h-screen ">
+        <main className="grow border-2  min-h-screen ">
           <Outlet  />
         </main>
         <Footer />

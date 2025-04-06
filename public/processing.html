@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processing please wait...</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            gap: 2em;
+            height: 100vh;
+            padding: 12em 0;
+            font-family: sans-serif;
+        }
+
+        .container {
+            border: 2px solid #781d42;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3em;
+            flex-direction: column;
+            padding: 2em;
+            border-radius: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Proccessing your booking please wait...</h1>
+        <div class="loader">
+            <h3 id="loading">loading...</h3>
+        </div>
+        <h2 id="message" class="message">-.-</h2>
+    </div>
+</body>
+<script>
+    const ststusMessage = document.getElementById("message")
+
+    function start() {
+        setTimeout(() => {
+            ststusMessage.innerText = ""
+            ststusMessage.innerText = "processing payment..."
+        }, 1000);
+
+        setTimeout(() => {
+            ststusMessage.innerText = "payment confirmed..."
+        }, 2000);
+        setTimeout(() => {
+            ststusMessage.style.color = "green"
+            ststusMessage.innerText = "booking comfirmed Please wait..."
+            document.getElementById("loading").style.color = "green"
+            document.getElementById("loading").innerText = "Redirecting to the page."
+
+        }, 3000);
+    }
+
+    start()
+    setTimeout(() => {
+        window.close()
+    }, 5000);
+</script>
+
+</html>

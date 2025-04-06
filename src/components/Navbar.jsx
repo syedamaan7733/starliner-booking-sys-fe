@@ -3,6 +3,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/context/auth.context";
 import { useNavigate } from "react-router-dom";
+import { Menu, MoreVertical } from "lucide-react";
 
 const Navbar = () => {
   const { isAuthenticated } = useAuth();
@@ -36,7 +37,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <a href="/" className="flex items-center">
               <img
-                src="./logo2.svg"
+                src="/logo2.svg"
                 className="max-w-[6em] md:max-w-[8em] lg:max-w-[10em]"
               />
             </a>
@@ -55,7 +56,9 @@ const Navbar = () => {
             </a>
             <a
               href="#"
-              onClick={() => navigate("/")}
+              onClick={() =>
+                isAuthenticated ? navigate("/my-bookings") : navigate("/auth")
+              }
               className={`transition-all duration-200 font-medium hover:text-primary ${
                 scrolled ? "text-muted-foreground" : "text-secondary"
               }`}
@@ -85,23 +88,10 @@ const Navbar = () => {
                   variant="ghost"
                   size="icon"
                   className={`p-0 ${
-                    scrolled ? "text-foreground" : "text-white"
+                    scrolled ? "text-foreground" : "text-black"
                   }`}
                 >
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M4 6h16M4 12h16M4 18h16"
-                    ></path>
-                  </svg>
+                  <Menu />
                   <span className="sr-only">Toggle menu</span>
                 </Button>
               </SheetTrigger>
@@ -125,7 +115,15 @@ const Navbar = () => {
                   >
                     Contact
                   </a>
-                  <Button className="mt-2">Get Started</Button>
+                  {!isAuthenticated && (
+                    <Button
+                      className="mt-2"
+                      onClick={() => navigate("/auth")}
+                      size="sm"
+                    >
+                      Sign In Now
+                    </Button>
+                  )}
                 </nav>
               </SheetContent>
             </Sheet>

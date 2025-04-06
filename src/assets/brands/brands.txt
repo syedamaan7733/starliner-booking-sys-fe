@@ -1,0 +1,5 @@
+phonepe:   https://play-lh.googleusercontent.com/6iyA2zVz5PyyMjK5SIxdUhrb7oh9cYVXJ93q6DZkmx07Er1o90PXYeo6mzL4VC2Gj9s=w480-h960-rw
+paytm:     https://raw.githubusercontent.com/hdpngworld/HPW/main/uploads/650d41381232a-l.png
+googlePay: https://cdn.worldvectorlogo.com/logos/google-pay-or-tez.svg
+Visa:      https://i.pinimg.com/736x/0f/86/07/0f86075d899c9069b235c23b792d70ef.jpg
+masterCrd: https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1544px-Mastercard-logo.svg.png
