@@ -7,20 +7,19 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-slate-900 text-slate-200">
+    <footer className="bg-slate-900 mt-10 text-slate-200">
       {/* Top Section with Logo, Newsletter and Contact */}
       <div className="container mx-auto py-12 px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Logo and About */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               {/* Placeholder for Logo */}
               <div className="bg-blue-500 text-white p-2 rounded-lg">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="currentColor" />
-                  <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+              <img
+                src="/logo2.svg"
+                className="max-w-[6em] md:max-w-[8em] lg:max-w-[10em]"
+              />
               </div>
               <span className="text-xl font-bold text-white">Starliner</span>
             </div>
@@ -43,35 +42,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Contact Information */}
-          <div>
-            <h3 className="font-bold text-lg text-white mb-4">Contact Us</h3>
-            <ul className="space-y-3">
-              <li className="flex items-center gap-2">
-                <MapPin size={16} className="text-blue-400" />
-                <span className="text-slate-400">123 Cosmos Avenue, Stellar City</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <Phone size={16} className="text-blue-400" />
-                <span className="text-slate-400">+1 (888) STAR-LINE</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <Clock size={16} className="text-blue-400" />
-                <span className="text-slate-400">Mon-Fri: 9AM - 8PM ET</span>
-              </li>
-            </ul>
-            <div className="mt-6">
-              <h4 className="font-medium text-white mb-2">Download Our App</h4>
-              <div className="flex gap-2">
-                <Button variant="outline" size="sm" className="text-xs border-slate-700 hover:bg-slate-800 text-slate-300">
-                  App Store
-                </Button>
-                <Button variant="outline" size="sm" className="text-xs border-slate-700 hover:bg-slate-800 text-slate-300">
-                  Google Play
-                </Button>
-              </div>
-            </div>
-          </div>
+ 
 
           {/* Newsletter */}
           <div>
