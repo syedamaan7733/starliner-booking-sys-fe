@@ -1,7 +1,9 @@
-import  axios  from "axios";
+import axios from "axios";
 import { authToken } from "./token.service";
 
-const BASE_URL = `http://localhost:8080/api/v1`;
+// const BASE_URL =  `http://localhost:8080/api/v1`;
+
+const BASE_URL = `https://starliner-booking-api.vercel.app/api/v1`;
 
 export const api = axios.create({
   baseURL: `${BASE_URL}`,

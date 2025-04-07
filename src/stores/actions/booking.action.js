@@ -23,6 +23,7 @@ import {
   FETCH_USER_DETAILS_FAILURE,
   FETCH_USER_DETAILS_REQUEST,
   FETCH_USER_DETAILS_SUCCESS,
+  GET_TICKET_DETAIL,
   RESET_SEATS_FAILURE,
   RESET_SEATS_REQUEST,
   RESET_SEATS_SUCCESS,
@@ -132,7 +133,7 @@ export const fetchUserBookings = () => {
 
     try {
       const bookingsData = await bookingApi.getUserBookings();
-      console.log(bookingsData)
+      console.log(bookingsData);
       dispatch({
         type: FETCH_USER_BOOKINGS_SUCCESS,
         payload: bookingsData.userBooking,
@@ -232,6 +233,13 @@ export const addTrainData = (data) => {
 export const addPassangerDetail = (data) => {
   return {
     type: ADD_PASSANGER_DETAIL,
+    payload: data,
+  };
+};
+
+export const getTicketDetail = (data) => {
+  return {
+    type: GET_TICKET_DETAIL,
     payload: data,
   };
 };

@@ -23,6 +23,7 @@ import {
   ADD_PASSANGER_DETAIL,
   FETCH_ALL_TRAIN_REQUEST,
   FETCH_ALL_TRAIN_SUCCESS,
+  GET_TICKET_DETAIL,
 } from "../actions/actionsType";
 
 const initialState = {
@@ -42,7 +43,7 @@ const initialState = {
   // User data
   passangerDetails: [],
   userBookings: [],
-  userDetails: null,
+  userDetails: {},
   newTicket: {},
 
   // Loading states
@@ -265,6 +266,14 @@ const bookingReducer = (state = initialState, action) => {
       return {
         ...state,
         passangerDetails: [...action.payload],
+      };
+    }
+
+    // Getting Tickets Details
+    case GET_TICKET_DETAIL: {
+      return {
+        ...state,
+        userDetails: { ...action.payload },
       };
     }
 

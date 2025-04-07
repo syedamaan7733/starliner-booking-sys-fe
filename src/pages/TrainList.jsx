@@ -10,7 +10,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { useDispatch, useSelector } from "react-redux";
-import { addTrainData, fetchAllTrain } from "@/stores/actions/booking.action";
+import { addTrainData, fetchAllTrain, fetchAvailableSeats } from "@/stores/actions/booking.action";
 import { useNavigate } from "react-router-dom";
 import { trainData } from "@/services/token.service";
 
@@ -26,10 +26,11 @@ const TrainList = () => {
 
   useEffect(() => {
     dispatch(fetchAllTrain());
+    dispatch(fetchAvailableSeats())
   }, []);
 
   function handleTap(data) {
-   dispatch(addTrainData(data))
+    dispatch(addTrainData(data));
     navigate("/book/form");
   }
 
