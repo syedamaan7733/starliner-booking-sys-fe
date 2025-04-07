@@ -13,7 +13,7 @@ import TrainList from "./pages/TrainList";
 import ProtectedRoute from "./components/ProtectedRoute";
 import BookForm from "./pages/BookForm";
 import BookingSummary from "./pages/BookingSummary";
-import RootLayout from "./layout/rootLayout";
+import RootLayout from "./layout/RootLayout";
 import { Toaster } from "sonner";
 import { Provider } from "react-redux";
 import { store } from "./stores/store";
