@@ -28,7 +28,7 @@ const BookingService = () => {
   const cities = ["Bangalore", "Delhi"];
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center md:justify-around  min-h-screen bg-foreground">
+    <div className="flex flex-col md:flex-row items-center  justify-center md:justify-around  min-h-screen bg-foreground">
       <Card className={"hidden md:flex flex-col min-w-40"}>
         <CardHeader className="  text-center">
           <div className="flex justify-center mb-4">

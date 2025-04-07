@@ -7,9 +7,9 @@ function RootLayout() {
   return (
     <div className="bg-background">
       <div className="flex flex-col justify-between  ">
-        <Navbar  />
-        <main className="grow border-2  min-h-screen ">
-          <Outlet  />
+        <Navbar />
+        <main className="grow min-h-screen ">
+          <Outlet />
         </main>
         <Footer />
       </div>
